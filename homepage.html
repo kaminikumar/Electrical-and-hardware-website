@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jehovah Hardware and Electrical</title>
+    <!-- Link to an external CSS file for better organization -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+
+/* Primary Button in Modal */
+.btn-primary {
+    background-color: #800080; /* Purple button background color */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Primary Button Hover State */
+.btn-primary:hover {
+    background-color: #4B0082; /* Darker indigo on hover */
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Jehovah Hardware and Electrical</h1>
+        <!-- Shopping Cart -->
+        <div class="cart-container">
+            <div class="cart" id="cart">
+                <!-- Cart items will be displayed here -->
+            </div>
+        </div>
+            <!-- Search Box on the Right -->
+            <form class="search-bar" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search for products">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+
+<nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="electricalDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bolt"></i> Electrical Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="electricalDropdown">
+                    <a class="dropdown-item" href="lightbulb.html">
+                        <i class="far fa-lightbulb"></i> Light Bulbs
+                    </a>
+                    <a class="dropdown-item" href="electricalcable.html">
+                        <i class="fas fa-plug"></i> Electrical Cables
+                    </a>
+                    <a class="dropdown-item" href="powertool.html">
+                        <i class="fas fa-tools"></i> Power Tools
+                    </a>
+                    <a class="dropdown-item" href="safetygear.html">
+                        <i class="fas fa-hard-hat"></i> Safety Gear
+                    </a>
+                    <a class="dropdown-item" href="wiring.html">
+                        <i class="fas fa-cogs"></i> Wiring Accessories
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="hardwareDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-toolbox"></i> Hardware Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="hardwareDropdown">
+                    <a class="dropdown-item" href="nail.html">
+                        <i class="fas fa-hammer"></i> Nails
+                    </a>
+                    <a class="dropdown-item" href="screw.html">
+                        <i class="fas fa-screwdriver"></i> Screws
+                    </a>
+                    <a class="dropdown-item" href="handtool.html">
+                        <i class="fas fa-toolbox"></i> Hand Tools
+                    </a>
+                    <a class="dropdown-item" href="plumbing.html">
+                        <i class="fas fa-faucet"></i> Plumbing Supplies
+                    </a>
+                    <a class="dropdown-item" href="building.html">
+                        <i class="fas fa-building"></i> Building Materials
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="welcome-message">
+                <h2>Welcome to Jehovah Hardware and Electrical</h2>
+                <p>We offer a wide range of electrical and hardware products to meet your needs. Explore our products by selecting from the dropdown menus above.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Gallery Section for Electrical Products -->
+<section class="section bg-light" id="gallery-electrical-products">
+  <div class="container">
+    <h2 class="text-center">Electrical Products</h2>
+    <div class="row">
+      <!-- Electrical Category Card: Light Bulbs -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Light Bulbs</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJGen086Jfr10C0EbpdmPKotQbYRyBhh99cw&usqp=CAU" alt="Light Bulbs" class="img-fluid product-image">
+          <p>Choose from a variety of light bulbs for your lighting needs.</p>
+        <button class="btn btn-primary" onclick="openModal('lightBulbsModal')">View Details</button>
+        </div>
+      </div>
+     
+      <!-- Electrical Category Card: Electrical Cables -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Electrical Cables</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeHI_tlAPv438HTlN2FoQRsRTMdGPbXvkCxQ&usqp=CAU" alt="Electrical Cables" class="img-fluid product-image">
+          <p>High-quality electrical cables for different applications.</p>
+        <button class="btn btn-primary" onclick="openModal('electricalCablesModal')">View Details</button>
+        </div>
+      </div>
+      </div>
+
+<div class="row justify-content-center">
+  <!-- Electrical Category Card: Power Tools -->
+  <div class="col-md-6 mx-auto">
+    <div class="category-card">
+      <h3>Power Tools</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6g_7mDp3Un5W5ovmhzjZeaG8NwYAbxVBAsw&usqp=CAU" alt="Power Tools" class="img-fluid product-image">
+      <p>Explore a wide range of power tools for your projects.</p>
+        <button class="btn btn-primary" onclick="openModal('powerToolsModal')">View Details</button>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
+      <!-- Electrical Category Card: Safety Gear -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Safety Gear</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJh7Y23WyJYr1c-7L7snI0cXcEzzeAna_cfg&usqp=CAU" alt="Safety Gear" class="img-fluid product-image">
+          <p>Explore a wide range of power tools for your projects.</p>
+        <button class="btn btn-primary" onclick="openModal('safetyGearModal')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Electrical Category Card: Wiring Accessories -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Wiring Accessories</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZqZ0n14BqQA7yKLPFpDYkkSHrLZgKLPTvQ&usqp=CAU" alt="Wiring Accessories" class="img-fluid product-image">
+          <p>Explore a wide range of power tools for your projects.</p>
+        <button class="btn btn-primary" onclick="openModal('wiringAccessoriesModal')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section for Hardware Products -->
+<section class="section bg-light" id="gallery-hardware-products">
+  <div class="container">
+    <h2 class="text-center">Hardware Products</h2>
+    <div class="row">
+      <!-- Hardware Category Card: Nails -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Nails</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SPN5eXN2bDQvbVfOkpyEEDpvUVj4QNWMNw&usqp=CAU" alt="Nails" class="img-fluid product-image">
+          <p>Explore our range of nails for your construction needs.</p>
+        <button class="btn btn-primary" onclick="openModal('nailsModal')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Hardware Category Card: Screws -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Screws</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO7LkYjS_sckBQUjGEJIknB49pcmh_3lxe2Q&usqp=CAU" alt="Screws" class="img-fluid product-image">
+          <p>Discover a variety of screws for your DIY projects.</p>
+        <button class="btn btn-primary" onclick="openModal('screwsModal')">View Details</button>
+        </div>
+      </div>
+     </div>
+
+<div class="row justify-content-center">
+      <!-- Hardware Category Card: Hand Tools -->
+      <div class="col-md-6 mx-auto">
+        <div class="category-card">
+          <h3>Hand Tools</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjNWgYn8oyIL7GF7iFBpfjZLLPZ-IGLKa3Lw&usqp=CAU" alt="Hand Tools" class="img-fluid product-image">
+          <p>Find high-quality hand tools for various tasks.</p>
+        <button class="btn btn-primary" onclick="openModal('handToolsModal')">View Details</button>
+        </div>
+      </div>
+</div>
+
+    <div class="row">
+      <!-- Hardware Category Card: Plumbing Supplies -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Plumbing Supplies</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUxzTfl0d57I30_IGmRBDCZLw3X_5ZIRqLpQ&usqp=CAU" alt="Plumbing Supplies" class="img-fluid product-image">
+          <p>Get plumbing supplies for your plumbing projects.</p>
+        <button class="btn btn-primary" onclick="openModal('plumbingSuppliesModal')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Hardware Category Card: Building Materials -->
+      <div class="col-md-6">
+        <div class="category-card">
+          <h3>Building Materials</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQAVgezsYxSCy2dw7RgxKg4thglnqdzhoC_A&usqp=CAU" alt="Building Materials" class="img-fluid product-image">
+          <p>Explore a wide range of building materials.</p>
+        <button class="btn btn-primary" onclick="openModal('buildingMaterialsModal')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Modal for Light Bulbs -->
+<div class="modal fade" id="lightBulbsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Light Bulbs</h2>
+            <p>Light bulbs are essential for providing illumination in homes, businesses, and various other settings. They come in various types to suit different needs and preferences. Here are some common types of light bulbs:</p>
+
+            <ul>
+                <li>
+                    <h3>Incandescent Bulbs</h3>
+                    <p>Incandescent bulbs produce light by heating a filament wire until it glows. While they provide warm, soft light, they are not energy-efficient and have a shorter lifespan compared to other types.</p>
+                </li>
+                <li>
+                    <h3>Compact Fluorescent Lamps (CFLs)</h3>
+                    <p>CFLs are energy-saving bulbs that use fluorescent technology to produce light. They are more energy-efficient and have a longer lifespan compared to incandescent bulbs. CFLs are available in various shapes and sizes.</p>
+                </li>
+                <li>
+                    <h3>Light Emitting Diodes (LEDs)</h3>
+                    <p>LEDs are highly energy-efficient and have an exceptionally long lifespan. They are versatile and come in various colors, making them suitable for various applications, including residential, commercial, and outdoor lighting.</p>
+                </li>
+                <li>
+                    <h3>Halogen Bulbs</h3>
+                    <p>Halogen bulbs are a type of incandescent bulb that contains halogen gas. They produce bright, white light and are commonly used in spotlights and task lighting. They offer excellent color rendering.</p>
+                </li>
+                <li>
+                    <h3>Fluorescent Tubes</h3>
+                    <p>Fluorescent tubes are long, tubular bulbs used for general lighting in commercial and industrial settings. They are energy-efficient but may have a cold start, especially in older models.</p>
+                </li>
+                <li>
+                    <h3>Smart Bulbs</h3>
+                    <p>Smart bulbs can be controlled remotely using a smartphone or voice commands. They often offer features like color-changing, dimming, and scheduling, l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥l̥allowing users to create customized lighting experiences.</p>
+                </li>
+            </ul>
+
+            <p>Choosing the right light bulb depends on factors such as energy efficiency, color temperature, brightness, and intended use. At Jehovah Hardware and Electrical, we offer a wide selection of light bulbs to meet your specific lighting needs.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Electrical Cables -->
+<div class="modal fade" id="electricalCablesModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Electrical Cables</h2>
+            <p>Electrical cables are a fundamental component of any electrical system, responsible for transmitting electrical power and signals. At Jehovah Hardware and Electrical, we offer a variety of electrical cables designed to meet the diverse needs of different applications. Here are some common types of electrical cables:</p>
+
+            <ul>
+                <li>
+                    <h3>Copper Cables</h3>
+                    <p>Copper cables are widely used for electrical wiring due to their excellent conductivity and durability. They are suitable for both residential and commercial applications and are known for their ability to carry electrical currents efficiently.</p>
+                </li>
+                <li>
+                    <h3>Aluminum Cables</h3>
+                    <p>Aluminum cables are often used for high-voltage transmission lines and overhead power distribution. They are lightweight and cost-effective, making them a preferred choice for long-distance power transmission.</p>
+                </li>
+                <li>
+                    <h3>Speaker Cables</h3>
+                    <p>Speaker cables are designed specifically for audio systems. They come in various gauges to accommodate different audio setups and are crucial for delivering high-quality sound from audio sources to speakers or amplifiers.</p>
+                </li>
+                <li>
+                    <h3>Coaxial Cables</h3>
+                    <p>Coaxial cables are commonly used for transmitting cable television signals and internet connections. They have a central conductor surrounded by layers of insulation and shielding, ensuring minimal signal interference.</p>
+                </li>
+                <li>
+                    <h3>Network Ethernet Cables</h3>
+                    <p>Ethernet cables are essential for wired network connections. Different categories, such as Cat5e, Cat6, and Cat7, offer varying levels of performance and speed, making them suitable for home networks, offices, and data centers.</p>
+                </li>
+                <li>
+                    <h3>Fiber Optic Cables</h3>
+                    <p>Fiber optic cables use light signals for data transmission, offering high-speed and long-distance connectivity. They are widely used in telecommunications, internet backbones, and high-bandwidth applications.</p>
+                </li>
+            </ul>
+
+            <p>When choosing the right electrical cable, factors such as conductivity, insulation material, voltage rating, and environmental conditions play a crucial role. Our selection of electrical cables at Jehovah Hardware and Electrical is designed to provide reliable and efficient electrical connectivity for various applications. Whether you need cables for power distribution, data transfer, or audio systems, we have you covered.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Power Tools -->
+<div class="modal fade" id="powerToolsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Power Tools</h2>
+            <p>Power tools are indispensable for various tasks in construction, woodworking, metalworking, and DIY projects. Jehovah Hardware and Electrical offers a wide range of power tools designed to make your work more efficient and precise. Here are some common types of power tools available:</p>
+
+            <ul>
+                <li>
+                    <h3>Drills</h3>
+                    <p>Drills are versatile power tools used for drilling holes in various materials, including wood, metal, and concrete. They come in corded and cordless models and offer different chuck sizes to accommodate various drill bits.</p>
+                </li>
+                <li>
+                    <h3>Saws</h3>
+                    <p>Saws come in various types, each designed for specific cutting tasks. Circular saws are ideal for straight cuts, while jigsaws are excellent for curved cuts. Reciprocating saws are versatile for cutting through different materials.</p>
+                </li>
+                <li>
+                    <h3>Sanders</h3>
+                    <p>Sanders are used for smoothing surfaces by removing excess material. Belt sanders, orbital sanders, and detail sanders are commonly used for woodworking and finishing projects.</p>
+                </li>
+                <li>
+                    <h3>Grinders</h3>
+                    <p>Grinders are powerful tools for cutting, grinding, and polishing tasks. Angle grinders are versatile and can handle various abrasive discs for different applications, including metal cutting and concrete grinding.</p>
+                </li>
+                <li>
+                    <h3>Routers</h3>
+                    <p>Routers are essential for hollowing out an area in wood or creating decorative edges. They are widely used in cabinetry and woodworking to add intricate details to projects.</p>
+                </li>
+                <li>
+                    <h3>Power Screwdrivers</h3>
+                    <p>Power screwdrivers make driving screws faster and more efficient. They come in corded and cordless models and are suitable for assembly and fastening tasks.</p>
+                </li>
+            </ul>
+
+            <p>Choosing the right power tool depends on the specific tasks you need to accomplish. Whether you're a professional tradesperson or a DIY enthusiast, having the right power tools can make your projects easier and more precise. At Jehovah Hardware and Electrical, we offer a comprehensive selection of power tools, ensuring that you have access to the tools you need for successful projects.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Safety Gear -->
+<div class="modal fade" id="safetyGearModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Safety Gear</h2>
+            <p>Safety gear is crucial for protecting individuals from workplace hazards and ensuring their well-being during various tasks and activities. At Jehovah Hardware and Electrical, we prioritize safety and offer a wide range of safety gear designed to keep you safe in diverse work environments. Here are some common types of safety gear available:</p>
+
+            <ul>
+                <li>
+                    <h3>Safety Helmets</h3>
+                    <p>Safety helmets, also known as hard hats, provide protection for the head against falling objects, impacts, and electrical hazards. They are essential for construction, industrial, and other hazardous work environments.</p>
+                </li>
+                <li>
+                    <h3>Safety Gloves</h3>
+                    <p>Safety gloves are designed to protect hands from cuts, abrasions, chemical exposure, and other potential hazards. They come in various materials and designs to suit specific tasks, such as cut-resistant gloves for handling sharp objects.</p>
+                </li>
+                <li>
+                    <h3>Protective Eyewear</h3>
+                    <p>Protective eyewear, including safety glasses and goggles, shields the eyes from flying debris, dust, chemicals, and harmful light sources. Proper eye protection is essential for tasks like grinding, welding, and woodworking.</p>
+                </li>
+                <li>
+                    <h3>Hearing Protection</h3>
+                    <p>Hearing protection gear, such as earplugs and earmuffs, reduces exposure to loud noise levels that can cause hearing damage over time. They are essential for workers in noisy environments like construction sites and manufacturing facilities.</p>
+                </li>
+                <li>
+                    <h3>Respiratory Protection</h3>
+                    <p>Respiratory protection gear, such as masks and respirators, safeguards against inhalation of harmful particles, dust, fumes, and gases. They are critical for tasks involving hazardous substances or airborne contaminants.</p>
+                </li>
+                <li>
+                    <h3>High-Visibility Apparel</h3>
+                    <p>High-visibility apparel, including vests and jackets with reflective strips, enhances visibility and safety in low-light conditions. They are commonly worn by construction and road workers.</p>
+                </li>
+            </ul>
+
+            <p>Prioritizing safety at the workplace is essential to prevent accidents and injuries. Jehovah Hardware and Electrical provides a comprehensive range of safety gear to ensure that you have the necessary protection while carrying out your tasks. By wearing the appropriate safety gear, you can minimize the risk of workplace accidents and work confidently in hazardous environments.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Wiring Accessories -->
+<div class="modal fade" id="wiringAccessoriesModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Wiring Accessories</h2>
+            <p>Wiring accessories are essential components for electrical installations, ensuring the safety and functionality of electrical systems. Jehovah Hardware and Electrical offers a comprehensive range of wiring accessories to meet the specific needs of your electrical projects. Here are some common types of wiring accessories available:</p>
+
+            <ul>
+                <li>
+                    <h3>Electrical Boxes</h3>
+                    <p>Electrical boxes, also known as junction boxes or switch boxes, provide housing for electrical connections, switches, and outlets. They ensure that wires are safely contained and protect against electrical hazards.</p>
+                </li>
+                <li>
+                    <h3>Wire Connectors</h3>
+                    <p>Wire connectors, including wire nuts and terminal blocks, are used to join electrical wires securely. They provide a safe and reliable way to make electrical connections, preventing loose or exposed wires.</p>
+                </li>
+                <li>
+                    <h3>Conduit and Conduit Fittings</h3>
+                    <p>Conduit is used to protect electrical wires from physical damage and exposure to moisture. Conduit fittings, such as connectors and couplings, secure conduit sections and maintain the integrity of the wiring system.</p>
+                </li>
+                <li>
+                    <h3>Switches and Outlets</h3>
+                    <p>Switches control the flow of electricity to lighting fixtures and appliances, while outlets provide access to electrical power. Wiring accessories include various types of switches, outlets, and receptacles to suit different applications.</p>
+                </li>
+                <li>
+                    <h3>Cable Management</h3>
+                    <p>Cable management solutions, such as cable clips, ties, and raceways, organize and secure electrical cables and wires. They help maintain a tidy and safe wiring system.</p>
+                </li>
+                <li>
+                    <h3>Wall Plates and Covers</h3>
+                    <p>Wall plates and covers provide a finishing touch to electrical installations. They come in various styles and colors and are used to conceal switches, outlets, and electrical boxes.</p>
+                </li>
+            </ul>
+
+            <p>Proper wiring accessories are essential for ensuring the reliability and safety of electrical systems. Whether you're installing electrical wiring in a residential, commercial, or industrial setting, Jehovah Hardware and Electrical offers a wide selection of wiring accessories to meet your project requirements. With our high-quality wiring accessories, you can create secure and efficient electrical connections for various applications.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Nails -->
+<div class="modal fade" id="nailsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Nails</h2>
+            <p>Nails are one of the most fundamental and versatile fasteners used in construction, woodworking, and various other applications. Jehovah Hardware and Electrical offers a wide range of nails to suit different project needs. Here are some common types of nails available:</p>
+
+            <ul>
+                <li>
+                    <h3>Common Nails</h3>
+                    <p>Common nails, also known as wire nails, are general-purpose nails with a flat head and a smooth shank. They are suitable for framing, carpentry, and other structural applications.</p>
+                </li>
+                <li>
+                    <h3>Finish Nails</h3>
+                    <p>Finish nails have a smaller, often angled, head designed to be concealed beneath the surface of the material. They are commonly used for trim work, molding, and other finishing applications.</p>
+                </li>
+                <li>
+                    <h3>Brad Nails</h3>
+                    <p>Brad nails are even smaller than finish nails and are typically used for delicate trim and molding work. They leave minimal visible holes and are ideal for precision applications.</p>
+                </li>
+                <li>
+                    <h3>Roofing Nails</h3>
+                    <p>Roofing nails are designed for securing roofing materials, such as shingles and felt paper. They have a large, flat head and a spiral shank for maximum holding power.</p>
+                </li>
+                <li>
+                    <h3>Concrete Nails</h3>
+                    <p>Concrete nails are specially designed for fastening materials to concrete, masonry, or other hard surfaces. They often have ribbed or fluted shanks for improved grip.</p>
+                </li>
+                <li>
+                    <h3>Common Wire Nails</h3>
+                    <p>Common wire nails are similar to common nails but are made from a thicker wire. They are suitable for heavy-duty applications and construction projects.</p>
+                </li>
+            </ul>
+
+            <p>Choosing the right type of nails is essential for the success of your project. Whether you're building a structure, installing trim, or working on roofing, Jehovah Hardware and Electrical offers a diverse selection of nails to meet your specific requirements. Our nails are made from high-quality materials to ensure durability and reliable fastening in various applications.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Screws -->
+<div class="modal fade" id="screwsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Screws</h2>
+            <p>Screws are versatile fasteners used in construction, woodworking, and various other applications to securely join materials together. Jehovah Hardware and Electrical offers a diverse selection of screws to meet different project requirements. Here are some common types of screws available:</p>
+
+            <ul>
+                <li>
+                    <h3>Wood Screws</h3>
+                    <p>Wood screws have a tapered, sharp point and are designed for use in wood and wood-based materials. They come in various styles, including flat-head, round-head, and pan-head, to suit different applications.</p>
+                </li>
+                <li>
+                    <h3>Sheet Metal Screws</h3>
+                    <p>Sheet metal screws have sharp threads and are used for fastening thin sheet metal, plastic, or other materials. They often feature a self-drilling or self-tapping design for ease of use.</p>
+                </li>
+                <li>
+                    <h3>Machine Screws</h3>
+                    <p>Machine screws have a uniform diameter and are used with nuts or in threaded holes. They are commonly used in machinery, equipment assembly, and automotive applications.</p>
+                </li>
+                <li>
+                    <h3>Concrete Screws</h3>
+                    <p>Concrete screws, also known as masonry screws or Tapcon screws, are designed for fastening materials to concrete, brick, or masonry surfaces. They often feature a special thread design for strong anchoring.</p>
+                </li>
+                <li>
+                    <h3>Drywall Screws</h3>
+                    <p>Drywall screws have fine threads and are designed for fastening drywall to wood or metal studs. They are characterized by their bugle-shaped heads, which help to set the screws flush with the surface.</p>
+                </li>
+                <li>
+                    <h3>Self-Drilling Screws</h3>
+                    <p>Self-drilling screws, also known as Tek screws, have a drill point and are designed to drill their own holes as they are driven into materials like metal and plastic. They are efficient for quick installations.</p>
+                </li>
+            </ul>
+
+            <p>Choosing the right type of screws is essential for achieving secure and reliable fastenings in your projects. Whether you're working with wood, metal, concrete, or other materials, Jehovah Hardware and Electrical offers a wide variety of screws to meet your specific needs. Our screws are made from high-quality materials to ensure durability and excellent performance in various applications.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Hand Tools -->
+<div class="modal fade" id="handToolsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Hand Tools</h2>
+            <p>Hand tools are essential for various tasks in construction, woodworking, automotive work, and DIY projects. Jehovah Hardware and Electrical offers a comprehensive range of hand tools designed to make your work more precise and efficient. Here are some common types of hand tools available:</p>
+
+            <ul>
+                <li>
+                    <h3>Screwdrivers</h3>
+                    <p>Screwdrivers are used for turning screws and fasteners. They come in various types, including flat-head and Phillips-head screwdrivers, as well as different sizes to accommodate different screw types.</p>
+                </li>
+                <li>
+                    <h3>Pliers</h3>
+                    <p>Pliers are versatile tools used for gripping, bending, and cutting materials. Common types include needle-nose pliers, slip-joint pliers, and cutting pliers.</p>
+                </li>
+                <li>
+                    <h3>Wrenches</h3>
+                    <p>Wrenches are used for tightening and loosening nuts and bolts. Types of wrenches include adjustable wrenches, combination wrenches, and socket wrenches.</p>
+                </li>
+                <li>
+                    <h3>Hammers</h3>
+                    <p>Hammers are used for driving nails and other fasteners into materials. They come in various styles, including claw hammers, ball-peen hammers, and rubber mallets.</p>
+                </li>
+                <li>
+                    <h3>Measuring Tools</h3>
+                    <p>Measuring tools, such as tape measures and rulers, are used for accurate measurements in construction and woodworking. Precision is crucial for ensuring precise cuts and placements.</p>
+                </li>
+                <li>
+                    <h3>Saws</h3>
+                    <p>Hand saws, including crosscut saws and hacksaws, are used for cutting materials manually. They are essential for tasks where power saws are not suitable.</p>
+                </li>
+            </ul>
+
+            <p>Hand tools are the backbone of many projects and are invaluable for tasks that require precision and control. At Jehovah Hardware and Electrical, we provide a wide selection of high-quality hand tools to assist you in your projects. Whether you're a professional tradesperson or a DIY enthusiast, having the right hand tools can make your work more manageable and precise.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Plumbing Supplies -->
+<div class="modal fade" id="plumbingSuppliesModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Plumbing Supplies</h2>
+            <p>Plumbing supplies are essential for water distribution, drainage, and various plumbing projects in residential, commercial, and industrial settings. Jehovah Hardware and Electrical offers a comprehensive range of plumbing supplies to meet your plumbing needs. Here are some common types of plumbing supplies available:</p>
+
+            <ul>
+                <li>
+                    <h3>PVC Pipes</h3>
+                    <p>PVC pipes are versatile and commonly used for water supply and drainage systems. They are lightweight, durable, and resistant to corrosion, making them ideal for various plumbing applications.</p>
+                </li>
+                <li>
+                    <h3>CPVC Pipes</h3>
+                    <p>CPVC pipes are suitable for both hot and cold water systems. They are heat-resistant and can withstand high temperatures, making them a reliable choice for plumbing projects.</p>
+                </li>
+                <li>
+                    <h3>Copper Pipes</h3>
+                    <p>Copper pipes are known for their excellent conductivity and corrosion resistance. They are often used for plumbing and heating systems, providing durability and efficient water flow.</p>
+                </li>
+                <li>
+                    <h3>PEX Pipes</h3>
+                    <p>PEX pipes are flexible and easy to install. They are used for both hot and cold water supply and are resistant to freezing, making them suitable for various plumbing applications.</p>
+                </li>
+                <li>
+                    <h3>Galvanized Steel Pipes</h3>
+                    <p>Galvanized steel pipes are coated with zinc to prevent corrosion. They are commonly used for water distribution systems and offer durability and strength.</p>
+                </li>
+                <li>
+                    <h3>HDPE Pipes</h3>
+                    <p>High-Density Polyethylene (HDPE) pipes are lightweight and strong. They find applications in water and gas supply systems due to their durability and versatility.</p>
+                </li>
+            </ul>
+
+            <p>Proper plumbing supplies are essential for maintaining the integrity of your plumbing system and ensuring reliable water distribution and drainage. Jehovah Hardware and Electrical offers a wide selection of high-quality plumbing supplies to support your plumbing projects, whether you're working on a residential, commercial, or industrial application. We prioritize durability and performance to ensure that your plumbing system functions efficiently and reliably.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Building Materials -->
+<div class="modal fade" id="buildingMaterialsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Building Materials</h2>
+            <p>Building materials are the foundation of construction projects, whether you're building a new structure or renovating an existing one. Jehovah Hardware and Electrical offers a comprehensive range of building materials to meet your construction needs. Here are some common types of building materials available:</p>
+
+            <ul>
+                <li>
+                    <h3>Lumber</h3>
+                    <p>Lumber is a fundamental building material used for framing, structural support, and various other construction applications. It's available in different wood species and dimensions to suit your project requirements.</p>
+                </li>
+                <li>
+                    <h3>Concrete Blocks</h3>
+                    <p>Concrete blocks are versatile and durable, used for constructing walls, foundations, and retaining walls. They come in various sizes and shapes, including standard blocks, corner blocks, and lintel blocks.</p>
+                </li>
+                <li>
+                    <h3>Bricks</h3>
+                    <p>Bricks are widely used for both structural and decorative purposes. They are available in different colors, sizes, and textures, allowing you to create a wide range of architectural designs.</p>
+                </li>
+                <li>
+                    <h3>Roofing Materials</h3>
+                    <p>Roofing materials include shingles, tiles, and metal roofing options. They protect your structure from the elements while adding aesthetic appeal to your building.</p>
+                </li>
+                <li>
+                    <h3>Insulation</h3>
+                    <p>Insulation materials help regulate temperature and energy efficiency in buildings. Options include fiberglass, foam board, and spray foam insulation, suitable for walls, ceilings, and attics.</p>
+                </li>
+                <li>
+                    <h3>Drywall</h3>
+                    <p>Drywall, also known as gypsum board, is used for interior wall and ceiling construction. It provides a smooth and paintable surface for finishing.</p>
+                </li>
+            </ul>
+
+            <p>Choosing the right building materials is critical for the structural integrity and longevity of your construction project. Whether you're a contractor working on a large-scale build or a homeowner tackling a renovation project, Jehovah Hardware and Electrical offers a wide selection of high-quality building materials. Our materials are sourced for durability and performance, ensuring that your construction project is built to last and meets your design and safety standards.</p>
+        </div>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 Jehovah Hardware and Electrical</p>
+                    </div>
+                    <div class="col-md-6 footer-links">
+                        <!-- Add footer links here, e.g., Privacy Policy, Contact Us, FAQs... -->
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Contact Us</a> |
+                        <a href="#">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Function to open the modal when a product card is clicked
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        $(modal).modal('show'); // Use jQuery to show the modal
+    }
+</script>
+
+</body>
+</html>
+
