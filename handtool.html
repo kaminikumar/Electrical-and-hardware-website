@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hardware - Hand Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Jehovah Hardware and Electrical</h1>
+            <form class="search-bar" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search for products">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+
+<nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="electricalDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bolt"></i> Electrical Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="electricalDropdown">
+                    <a class="dropdown-item" href="lightbulb.html">
+                        <i class="far fa-lightbulb"></i> Light Bulbs
+                    </a>
+                    <a class="dropdown-item" href="electricalcable.html">
+                        <i class="fas fa-plug"></i> Electrical Cables
+                    </a>
+                    <a class="dropdown-item" href="powertool.html">
+                        <i class="fas fa-tools"></i> Power Tools
+                    </a>
+                    <a class="dropdown-item" href="safetygear.html">
+                        <i class="fas fa-hard-hat"></i> Safety Gear
+                    </a>
+                    <a class="dropdown-item" href="wiring.html">
+                        <i class="fas fa-cogs"></i> Wiring Accessories
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="hardwareDropdown" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-toolbox"></i> Hardware Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="hardwareDropdown">
+                    <a class="dropdown-item" href="nail.html">
+                        <i class="fas fa-hammer"></i> Nails
+                    </a>
+                    <a class="dropdown-item" href="screw.html">
+                        <i class="fas fa-screwdriver"></i> Screws
+                    </a>
+                    <a class="dropdown-item" href="handtool.html">
+                        <i class="fas fa-toolbox"></i> Hand Tools
+                    </a>
+                    <a class="dropdown-item" href="plumbing.html">
+                        <i class="fas fa-faucet"></i> Plumbing Supplies
+                    </a>
+                    <a class="dropdown-item" href="building.html">
+                        <i class="fas fa-building"></i> Building Materials
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div id="filter">
+        <label for="typeFilter">Filter by Type:</label>
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+            <option value="screwdrivers">Screwdrivers</option>
+            <option value="pliers">Pliers</option>
+            <option value="wrenches">Wrenches</option>
+            <option value="hammers">Hammers</option>
+            <option value="measuring_tools">Measuring Tools</option>
+            <option value="saws">Saws</option>
+        </select>
+    </div>
+    <div id="productList">
+        <!-- Hand tools items will be added here dynamically using JavaScript -->
+    </div>
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 Jehovah Hardware and Electrical</p>
+                    </div>
+                    <div class="col-md-6 footer-links">
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Contact Us</a> |
+                        <a href="#">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="common.js"></script>
+    <script>
+        // JavaScript code to handle hand tools display, filter, and cart functionality
+        // (You can keep your JavaScript code here as per your requirements)
+const handToolsData = [
+    { id: 1, name: "Screwdrivers", type: "screwdrivers", price: 7.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa9C0kUaigkwyJjfEkEOhgAxMSPbkqDKiZrw&usqp=CAU" },
+    { id: 2, name: "Pliers", type: "pliers", price: 9.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnmzQxviEpkYDHGc6ynP_P_QpYj2qtc49UA&usqp=CAU" },
+    { id: 3, name: "Wrenches", type: "wrenches", price: 12.49, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3k9HxUNzHpw2qRioSi7WVnR_Aeu7BK9xnOA&usqp=CAU" },
+    { id: 4, name: "Hammers", type: "hammers", price: 8.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJo-0-ddcrZGPqGbpE_H_nZ1xBe5yGUPPNug&usqp=CAU" },
+    { id: 5, name: "Measuring Tools", type: "measuring_tools", price: 6.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIGj4Qzaj4NesM-LE_w4NsQCBsAyao7-phLQ&usqp=CAU" },
+    { id: 6, name: "Saws", type: "saws", price: 14.99, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjtFYkYPoWGSvbbQxCwI9M7YwNXq2j9PcyA&usqp=CAU" },
+];
+
+const productList = document.getElementById("productList");
+const typeFilter = document.getElementById("typeFilter");
+
+// Function to add an item to the cart
+function addToCart(itemId, itemImage, itemName, itemPrice) {
+    // Check if the cart data exists in localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if the item is already in the cart
+    let existingItem = cart.find(item => item.name === itemName);
+
+    if (existingItem) {
+        // If the item is already in the cart, increase its quantity
+        existingItem.quantity++;
+    } else {
+        // If the item is not in the cart, add it with a quantity of 1
+        cart.push({ id: itemId, name: itemName, image: itemImage, price: itemPrice, quantity: 1 });
+    }
+
+    // Update the cart data in localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Alert the user that the item has been added to the cart (you can use a more user-friendly UI element)
+    alert(itemName + ' has been added to the cart.');
+
+    // Redirect to the shopping cart page
+    window.location.href = "cart.html";
+}
+
+// Function to display hand tools based on the selected filter
+function displayHandTools() {
+    const selectedType = typeFilter.value;
+
+    const filteredHandTools = selectedType === "all" ? handToolsData : handToolsData.filter(tool => tool.type === selectedType);
+
+    productList.innerHTML = "";
+
+    filteredHandTools.forEach(tool => {
+        const productItem = document.createElement("div");
+        productItem.classList.add("product");
+        productItem.innerHTML = `
+            <img src="${tool.image}" alt="${tool.name}">
+            <h2>${tool.name}</h2>
+            <p>Price: $${tool.price.toFixed(2)}</p>
+            <button onclick="addToCart(${tool.id}, '${tool.image}', '${tool.name}', ${tool.price})">Add to Cart</button>
+        `;
+        productList.appendChild(productItem);
+    });
+}
+
+// Event listener for filter change
+typeFilter.addEventListener("change", displayHandTools);
+
+// Initial display
+displayHandTools();
+    </script>
+</body>
+</html>
